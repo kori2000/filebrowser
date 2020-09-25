@@ -1,21 +1,15 @@
-FROM debian:buster
+FROM alpine:latest as alpine
+RUN apk --update add ca-certificates
+RUN apk --update add mailcap
+
+FROM scratch
+COPY --from=alpine /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+COPY --from=alpine /etc/mime.types /etc/mime.types
 
 VOLUME /srv
 EXPOSE 80
 
-#COPY .docker.json /.filebrowser.json
-#COPY .database.db /.database.db
-#COPY filebrowser /filebrowser
-
-#COPY . .
-
-# RUN chown -R :0 .filebrowser.json \
-#     && chmod -R a+w .filebrowser.json
-
-# RUN chown -R :0 database.db \
-#     && chmod -R a+w database.db
-
-# RUN chown -R :0 filebrowser \
-#     && chmod -R a+w filebrowser
+COPY .docker.json /.filebrowser.json
+COPY filebrowser /filebrowser
 
 ENTRYPOINT [ "/filebrowser" ]
