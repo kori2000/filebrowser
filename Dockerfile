@@ -9,8 +9,8 @@ EXPOSE 80
 
 COPY . .
 
-RUN chown -R :0 filebrowser.json \
-    && chmod -R a+w filebrowser.json
+RUN chown -R :0 .filebrowser.json \
+    && chmod -R a+w .filebrowser.json
 
 RUN chown -R :0 database.db \
     && chmod -R a+w database.db
