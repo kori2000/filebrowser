@@ -7,7 +7,7 @@ COPY --from=alpine /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certific
 COPY --from=alpine /etc/mime.types /etc/mime.types
 
 VOLUME /srv
-EXPOSE 80
+EXPOSE 8900
 
 COPY .docker.json /.filebrowser.json
 COPY filebrowser /filebrowser
