@@ -1,10 +1,9 @@
-*.db
+
 *.lock
 *.bak
 _old
 rice-box.go
 .idea/
-filebrowser
 dist/
 
 .DS_Store
