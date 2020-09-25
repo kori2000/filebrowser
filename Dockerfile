@@ -3,9 +3,11 @@ FROM debian:buster
 VOLUME /srv
 EXPOSE 80
 
-COPY .docker.json /.filebrowser.json
-COPY .database.db /.database.db
+#COPY .docker.json /.filebrowser.json
+#COPY .database.db /.database.db
 #COPY filebrowser /filebrowser
+
+COPY . .
 
 RUN chown -R :0 filebrowser.json \
     && chmod -R a+w filebrowser.json
