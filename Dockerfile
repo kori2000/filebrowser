@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:latest
 
 VOLUME /srv
 EXPOSE 8900
