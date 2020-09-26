@@ -2,6 +2,7 @@ FROM alpine:latest as alpine
 RUN apk --update add ca-certificates
 RUN apk --update add mailcap
 RUN apk --update add curl
+RUN apk --update add bash
 
 FROM scratch
 COPY --from=alpine /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
