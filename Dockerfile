@@ -10,7 +10,7 @@ COPY --from=alpine /etc/mime.types /etc/mime.types
 VOLUME /srv
 EXPOSE 8900
 
-RUN curl -fsSL https://filebrowser.org/get.sh
+RUN get.sh
 
 COPY .docker.json /.filebrowser.json
 COPY filebrowser /filebrowser
