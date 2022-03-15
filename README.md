@@ -13,7 +13,15 @@ make build
 make up
 
 http://localhost:5200
+
 ```
+
+```python
+username: admin
+password: yourPass
+```
+
+To change the credentials you need to modify the Dockerfile.
 
 ## Contributing
 
