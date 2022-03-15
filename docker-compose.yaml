@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+
+  fb:
+    container_name: fb
+    restart: always
+    build:
+      context: .
+    volumes:
+      - ./share:/srv
+    ports:
+      - 5200:5200
+
+volumes:
+    share:

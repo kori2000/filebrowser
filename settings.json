@@ -1,0 +1,8 @@
+{
+    "port": 5200,
+    "baseURL": "",
+    "address": "",
+    "log": "stdout",
+    "database": "/database.db",
+    "root": "/srv"
+}
